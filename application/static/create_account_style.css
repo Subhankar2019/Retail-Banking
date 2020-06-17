@@ -1,0 +1,28 @@
+.warning{
+  color:red;
+  margin-left:10 em;
+}
+
+
+form label.required:after
+{
+  color: red;
+  content: " *";
+}
+
+
+#button1{
+	background-color:black;
+	color:gold;
+	height:25px;
+	width:100px;
+}
+
+
+
+
+
+
+
+
+

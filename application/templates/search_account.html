@@ -1,0 +1,44 @@
+{% extends "executive.html" %}
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/search_account_style.css')}}">
+{% endblock %}
+{% block body%}
+<div class="form-horizontal" style="text-align:center;" ><br><br>
+    <div style="margin-bottom: 5em;text-align: center;"><h1>Account Search</h1></div>
+    <div class="form-horizontal" style="text-align:center;" >
+    
+  
+      <small class="small">*Either one of the details should be entered</small><br><br>
+         <form action="" method="POST">
+          <div style="text-align:center">
+          <table style="margin-left:auto;margin-right: auto;padding:10px">
+            <tr>
+              <td>  <label class="control-label required" for="accountid">Account ID:&nbsp</label></td>
+               <td><input type="text" name="accountid" ></td>             
+            </tr>
+            <tr><td><br></td></tr>
+            <tr><td>&nbsp</td>
+              <td class="col">OR</td>
+  
+            </tr>
+            <tr><td><br></td></tr>
+            <tr>
+               <td> <label class="control-label required" for="accounttype">Enter Customer ID:&nbsp</label></td>
+               <td><input type="text" name="customerid"></td>
+           </tr>   
+           </tr>
+            <tr><td><br></td></tr>
+            <tr>
+           <tr><td>&nbsp</td><td class="button"><button class="butn" type="submit">VIEW</button></td>
+           </tr>        
+            
+         
+             
+          </table>
+          </div>
+        
+         </form>
+         
+      </div>
+  </div>
+  {% endblock %}

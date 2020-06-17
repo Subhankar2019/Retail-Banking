@@ -1,0 +1,39 @@
+{% extends "executive.html" %}
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/create_account_style.css')}}">
+{% endblock %}
+{% block body%}
+{% if message %}
+<h1 class="error">{{message}}</h1>
+{% endif%}
+<div class="form-horizontal" style="text-align: center;">
+    <div style="margin-bottom: 5em;"><h1>Create Account</h1></div>
+      <form action="" method="POST">
+          <div class="form-group">
+              <label class="control-label required" for="customerId">Customer ID:&nbsp</label>
+              <input type="text"  name="customerId" required="required">             
+          </div>
+          <div class="form-group">
+              <label class="control-label required" for="sel1" required="required">Account type:</label>
+               <select  id="sel1" name="account_type">
+                <option hidden disabled selected value></option>
+                <option> Current Account</option>
+                <option>Savings Account</option>
+                <option>Recurring Deposit Account</option>
+                <option>Fixed Deposit Account</option>
+              </select>
+            </div>
+          <div class="form-group">
+              <label class="control-label required" for="depositAmount">Deposit amount:&nbsp</label>
+              <input type="text" name="depositAmount" required="required">                 
+          </div>
+           <div>
+          <label class="warning"><small>
+              ( * )Fields are compulsory</small></label>
+          </div>
+          <button id="button1" class="btn btn-primary" type="submit">submit</button>
+      </form>
+      
+    </div>
+
+            {% endblock %}

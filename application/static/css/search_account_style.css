@@ -1,0 +1,21 @@
+.col{
+    text-align: center;
+  }
+  .button{
+    text-align: center;
+  }
+  .butn{
+    background-color: black;
+    color:yellow;
+  }
+  .small{
+      position:absolute;right:400px;
+      color:red;
+  }
+  form label.required::after{
+      content:"*";
+      color:red;
+  }
+  .small{ 
+    position:absolute;right:400px;
+  }

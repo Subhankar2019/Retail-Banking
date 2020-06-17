@@ -1,0 +1,50 @@
+.warning{
+    color:red;
+    margin-left:-130px;
+}
+
+
+form label.required:after
+{
+    color: red;
+    content: "*";
+}
+
+td{
+    font-family:sans-serif;
+    font-weight:bold;
+    font-size:10px;
+}
+
+#sel1
+{
+    width:100px;
+    float:left;
+}
+.control-label{
+    float:left;
+}
+.table{
+    margin-left:auto;margin-right: auto;padding:10px;
+}
+#button1{
+	background-color:black;
+	color:gold;
+	height:25px;
+	width:100px;
+}
+.error
+{
+	font-size:20px;
+	font-weight:bold;
+	color:black;
+	background-color:gold;
+	width:400px;
+	height:30px;
+	padding-top:10px;
+	padding-left:50px
+}
+.heading
+{
+	margin-left:450px
+}

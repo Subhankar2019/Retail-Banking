@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FedChoice Bank</title>
+  {% block head %}{% endblock %}
+	<link rel="stylesheet" href="{{url_for('static',filename='css/executive_layout_style.css')}}">
+
+</head>
+<body>
+<div id="div1">
+	<p>
+		FedChoice 
+		<span style="color: white">Bank</span>
+	</p>
+	<div class="navbar">
+    <a href="#home">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Customer Management 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/register_customer">Create Customer</a>
+        <a href="/update_customer/search">Update Customer</a>
+        <a href="/delete_customer/search">Delete Customer</a>
+      </div>
+    </div> 
+    <div class="dropdown">
+      <button class="dropbtn">Account Management 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/create_account">Create Account</a>
+        <a href="/delete_account/search">Delete Account</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Status Details
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/customer_status">Customer Status</a>
+        <a href="/account_status">Account Status</a>
+      </div>
+    </div>
+    <a href="#">Logout</a>
+
+  </div>
+<div class="bodyfield">
+  {% if mes %}
+  <h1 class="error">{{mes}}</h1>
+  {% endif %}
+{% block body %}{% endblock%}
+</div>
+<footer class="footer">
+	<ul>
+  <li><a >About Us</a></li> 
+  <li><a >Services</a></li> 
+  <li><a >Contact US</a></li>
+</ul>
+</footer>
+</body>
+</html>

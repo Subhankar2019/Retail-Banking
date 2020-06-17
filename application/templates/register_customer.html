@@ -1,0 +1,72 @@
+{% extends "executive.html" %}
+{% block head %}
+<link rel="stylesheet" href="static/css/registercustomer_style.css">
+{% endblock %}
+{% block body%}
+{% if message %}
+<h1 class="error">{{message}}</h1>
+{% endif%}
+<h1 class="heading">Create Customer Screen</h1>
+<form action="" method="POST">
+    <div style="text-align:center">
+<table class="table">
+    <tr>
+      <td>  <label class="control-label required" for="customerId">Customer SSN Id:&nbsp</label></td>
+       <td> <input type="text"  name="ssnid" required="required"></td>             
+    </tr>
+    <tr>
+       <td> <label class="control-label required" for="customerName">Customer Name:&nbsp</label></td>
+       <td><input type="text"  name="customerName" required="required"></td>
+        </tr>           
+        <tr>
+ 
+    <td>   <label class="control-label required" for="age">Age&nbsp</label></td>
+       <td> <input type="text"  name="age" required="required">  </td>           
+  </tr>
+  <tr>
+   
+   <td>    <label class="control-label required" for="address">Address&nbsp</label></td> 
+     <td>   <input type="text"  name="address" required="required"></td>          
+  </tr>
+   <tr>
+     <td>   <label class="control-label required" for="sel1" required="required">State:</label></td>
+       <td>  <select name="state" id="sel1" >
+          <option hidden disabled selected value>Select</option>
+          <option>Andhra Pradesh</option>
+          <option>Arunachal Pradesh</option>
+          <option>Assam</option>
+          <option>Gujarath</option>
+          <option>Haryana</option>
+          <option>Telangana</option>
+          <option>Odisha</option>
+          <option>West Bengal</option>
+          <option>Uttar Pradesh</option>
+        </select></td>
+    </tr>
+      <tr>
+      <td>  <label class="control-label required" for="sel1" required="required">City:</label></td>
+       <td>  <select  id="sel1" name="city">
+          <option hidden disabled selected value>Select</option>
+          <option>Mumbai</option>
+          <option>Bangalore</option>
+          <option>Chennai</option>
+          <option>Hyderabad</option>
+          <option>Kolkata</option>
+          <option>Delhi</option>
+        </td>
+        </tr>
+    </table>
+        <div style="margin-top:1em;margin-bottom:2em">
+              
+            <label class="warning"><small>
+               ( * )Fields are compulsory</small></label></td></div>
+               <button id="button1" class="btn btn-primary" type="submit">submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+       <button id="button1" class="btn btn-primary" type="reset">reset</button>
+   </div>      
+
+   
+
+
+</form>
+
+            {% endblock %}

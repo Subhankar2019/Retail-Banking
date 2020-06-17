@@ -1,0 +1,74 @@
+{% extends "executive.html" %}
+{% block head %}
+<link rel="stylesheet" href="static/css/update_customer_style.css">
+{% endblock %}
+
+{% block body %}
+<div class="form-horizontal" style="text-align:center;" >
+                <div style="margin-bottom: 5em;text-align: center;"><h1>Update Customer </h1></div>
+              
+                <form class="form" action="/update_customer/{{form.customer_id}}" method="POST">
+                    <div style="text-align:center;margin-top:-120px;">
+                <table style="margin-left:auto;margin-right: auto;padding:10px">
+                    <tr>
+                      <td>  <label class="control-label " for="customerssnId">Customer SSN ID&nbsp</label></td>
+                       <td> {{form.ssn_id}}</td>             
+                    </tr>
+                    <tr>
+                       <td> <label class="control-label " for="customerid">Customer ID&nbsp</label></td>
+                       <td>{{form.customer_id}}</td>
+                        </tr>           
+                    <tr>
+                 
+                    <td>   <label class="control-label " for="oldcustomername">Old Customer Name&nbsp</label></td>
+                    <td> {{form.customer_name}}  </td>           
+                   </tr>
+                 
+                   <tr>
+                 
+                    <td>   <label class="control-label required" for="newcustomername">New Customer Name&nbsp</label></td>
+                    <td> <input type="text"  name="newcustomername" required="required">  </td>           
+                   </tr><br>
+                   
+                   
+                   <tr>
+                 
+                    <td>   <label class="control-label " for="oldaddress">Old Address&nbsp</label></td>
+                    <td> {{form.address}}  </td>           
+                   </tr>  <br>
+                    <tr>
+                    
+                    <td>   <label class="control-label required" for="newaddress">New Address&nbsp</label></td>
+                    <td> <input type="text"  name="newaddress" required="required">  </td>           
+                   </tr> <br>
+                   <tr>
+                    
+                    <td>   <label class="control-label " for="oldage">Old Age&nbsp</label></td>
+                    <td> {{form.age}} </td>           
+                   </tr> <br>
+                   <tr>
+                 
+                    <td>   <label class="control-label required" for="newage">New Age&nbsp</label></td>
+                    <td> <input type="text"  name="newage" required="required">  </td>           
+                   </tr>
+
+
+
+
+        
+    
+                </table>
+                    </div>
+            
+                
+                
+                <div style="margin-top:1em;margin-bottom:2em">
+              
+                     <label class="warning"><small>
+                        ( * )Fields are compulsory</small></label></td></div>
+                        <button id="button1" class="btn btn-primary" type="submit">Update</button>
+                    </form>
+                </div>   
+        </div>
+
+{% endblock %}

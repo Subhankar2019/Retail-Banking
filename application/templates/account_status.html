@@ -1,0 +1,69 @@
+{% extends "executive.html" %}
+{% block head %}
+<style>
+    table{
+        border:1px solid black;
+        border-collapse:collapse;
+        margin-bottom:2em;
+    }
+    th{
+        color:black;
+        background-color: gold;
+        border:1px solid black;
+        font-weight: bolder;
+        padding:8px;
+        text-align: center;
+    }
+    td{
+        border:1px solid black;
+        padding:5px;
+    }
+    a{
+        text-decoration:underline;
+        
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="form-horizontal" style="text-align: center;">
+    <div style="margin-top:4em"><h1>Account Status</h1></div>
+
+          <table style="margin-left:auto;margin-right: auto;margin-top: 4em;">
+            <tr >
+                <th>
+                    Customer ID
+                </th>
+                <th>
+                    Account ID
+                </th>
+                <th>
+                    Account Type
+                </th>
+                <th>
+                    Account Status
+                </th>
+                <th>
+                    Message
+                </th>
+                <th>
+                    Operations
+                </th>
+            </tr>
+            {% for account in accounts %}
+            <tr>
+                <td>{{account.customer_id}}</td>
+                <td>{{account.account_id}}</td>
+                <td>{{account.account_type}}</td>
+                <td>Active</td>
+                <td>{{account.account_status}}</td>
+                <td><a href="/account_status">Refresh</a></td>
+            </tr>
+            {% endfor %}
+   
+                  
+          </table>
+          
+          <button type="reset" class="btn btn-primary" Style="color:yellow;background-color:black;">Refresh the list</button>
+</div>
+
+{% endblock %}

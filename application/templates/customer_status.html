@@ -1,0 +1,66 @@
+{% extends "executive.html" %}
+{% block head %}
+<style>
+    table{
+        border:1px solid black;
+        border-collapse:collapse;
+    }
+    th{
+        color:black;
+        background-color: gold;
+        border:1px solid black;
+        font-weight: bolder;
+        padding:8px;
+    }
+    td{
+        border:1px solid black;
+        padding:5px;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="form-horizontal" style="text-align: center;">
+    <div style="margin-top:4em"><h1>Customer Status</h1></div>
+
+          <table style="margin-left:auto;margin-right: auto;margin-top: 4em;">
+            <tr >
+                <th>
+                    Customer Id
+                </th>
+                <th>
+                    Customer SSN ID
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Message
+                </th>
+                <th>
+                    Operations
+                </th>
+                <th>
+                    View Profile
+                </th>
+            </tr>
+            
+
+                {% for customer in customers %}
+                <tr></tr>
+                <td>{{customer.customer_id}}</td>
+                <td>{{customer.ssn_id}}</td>
+                <td>active</td>
+                <td>{{customer.customer_status}}</td>
+                <td><a href="/customer_status">refresh</a> </td>
+                <td><a href="">view details</a></td>
+            </tr>
+                {% endfor %}
+            
+   
+                  
+          </table>
+          
+       
+</div>
+
+{% endblock %}

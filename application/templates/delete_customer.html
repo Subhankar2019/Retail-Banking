@@ -1,0 +1,46 @@
+{% extends "executive.html" %}
+{% block head %}
+<link rel="stylesheet" href="static/css/delete_customer_style.css">
+{% endblock %}
+
+{% block body %}
+<div class="form-horizontal" style="text-align:center;" ><br><br>
+    
+    <div style="margin-bottom: 5em;text-align: center;"><h1>Delete Customer </h1></div>
+       <form action="\delete_customer\{{form.customer_id}}" method="POST">
+        <div style="text-align:center">
+        <table style="margin-left:auto;margin-right: auto;padding:10px">
+          <tr>
+            <td>  <label class="control-label required" for="ssnId">SSN ID&nbsp</label></td>
+             <td> {{form.ssn_id}}</td>             
+          </tr>
+          <tr>
+             <td> <label class="control-label required" for="customerid">Customer ID&nbsp</label></td>
+             <td>{{form.customer_id}}</td>
+              </tr>           
+          <tr>
+       
+          <td>   <label class="control-label required" for="customername"> Customer Name&nbsp</label></td>
+          <td>{{form.customer_name}} </td>           
+         </tr>
+       
+         <tr>
+       
+            <td>   <label class="control-label required" for="age"> Age&nbsp</label></td>
+            <td> {{form.age}} </td>           
+         </tr>
+         <tr>
+       
+            <td>  <label class="control-label required" for="address"> Address&nbsp</label></td>
+            <td> {{form.address}}  </td>           
+           </tr>
+
+        </table>
+        </div>
+        <button class="buttonn" type="submit">Confirm Delete</button>&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit">Cancel</button>
+       </form>
+       
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/loginpage_style.css')}}">
+</head>
+<body>
+    <div class="row">
+        
+        
+            <form name="login" action="" method="post" novalidate>
+                <fieldset class="form-group">
+                    <h1 class="heading">{{title}}</h1> 
+                    {{ form.hidden_tag() }}
+
+                    <p>
+                        {{ form.user_id(size=35,placeholder="UserName") }}<br>
+                        {% for error in form.user_id.errors %}
+                            <span class="error-message">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.password(size=15,placeholder="Password") }}<br>
+                        {% for error in form.password.errors %}
+                            <span class="error-message">{{ error }}</span>
+                        {% endfor %}
+                    </p>
+
+                    <p>
+                        {{ form.submit() }}
+                    </p>
+                     {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                    <p class="error-message">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+                </fieldset>
+            </form>
+           
+        </div>
+    
+    
+</body>
+</html>
